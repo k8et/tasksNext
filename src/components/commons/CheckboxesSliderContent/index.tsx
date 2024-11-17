@@ -9,9 +9,12 @@ const AutocompleteSliderContent = () => {
             <Checkbox defaultSelected color="primary">Primary</Checkbox>
             <Checkbox defaultSelected color="danger">Danger</Checkbox>
             <CustomCheckbox
+                classNames={{
+                    content: "text-gray-100 ",
+                }}
                 defaultSelected={false}
                 startContent={
-                    <div className={"text-2xl"}>
+                    <div className={"text-2xl "}>
                         +
                     </div>
                 }
