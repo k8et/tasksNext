@@ -38,7 +38,6 @@ const checkboxStyles = tv({
     },
 });
 
-// Используем forwardRef с правильной типизацией
 const CustomCheckbox = forwardRef<HTMLDivElement, CustomCheckboxProps>(
     (
         {
