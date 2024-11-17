@@ -39,7 +39,7 @@ const CustomAutocomplete: FC<CustomAutocompleteProps> = ({ setSelectedUserName }
                             "rounded-medium",
                             "text-default-500",
                             "transition-opacity",
-                            "data-[hover=true]:text-foreground",
+                            "data-[hover=true]:text-black",
                             "dark:data-[hover=true]:bg-default-50",
                             "data-[pressed=true]:opacity-70",
                             "data-[hover=true]:bg-default-200",
@@ -63,7 +63,7 @@ const CustomAutocomplete: FC<CustomAutocompleteProps> = ({ setSelectedUserName }
             >
                 {(item) => (
                     <AutocompleteItem key={item.id} textValue={item.exemple1}>
-                        <div className="flex justify-between items-center">
+                        <div className="flex justify-between items-center  ">
                             <div className="flex gap-2 items-center">
                                 <div className="flex flex-col">
                                     <span className="text-small">{item.exemple1}</span>
