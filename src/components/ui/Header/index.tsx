@@ -21,7 +21,9 @@ const Header = () => {
     return (
         <Navbar className={"bg-gray-800"} maxWidth={"2xl"}>
             <NavbarBrand className={"max-sm:hidden"}>
-                <p className="font-bold text-inherit ">NEXT</p>
+                <Link className={"font-bold text-inherit "} href={"/"}>
+                    NEXT
+                </Link>
             </NavbarBrand>
             <NavbarContent className="text-white/80 sm:flex gap-4 max-sm:w-full max-sm:items-center" justify="center">
                 {navItems.map(({ name, path }) => (
