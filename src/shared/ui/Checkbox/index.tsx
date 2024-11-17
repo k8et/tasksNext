@@ -1,5 +1,5 @@
-import {useCheckbox, Chip, VisuallyHidden, tv} from "@nextui-org/react";
-import React, {ReactNode} from "react";
+import { useCheckbox, Chip, VisuallyHidden, tv } from "@nextui-org/react";
+import React, { ReactNode, forwardRef, Ref } from "react";
 
 type CustomCheckboxProps = {
     defaultSelected?: boolean;
@@ -38,7 +38,8 @@ const checkboxStyles = tv({
     },
 });
 
-const CustomCheckbox = React.forwardRef<HTMLDivElement, CustomCheckboxProps>(
+// Используем forwardRef с правильной типизацией
+const CustomCheckbox = forwardRef<HTMLDivElement, CustomCheckboxProps>(
     (
         {
             defaultSelected = false,
@@ -67,13 +68,15 @@ const CustomCheckbox = React.forwardRef<HTMLDivElement, CustomCheckboxProps>(
             isFocusVisible: isFocusVisible || customStyles.isFocusVisible,
         });
 
+
         return (
             <label {...getBaseProps()}>
                 <VisuallyHidden>
                     <input {...getInputProps()} />
                 </VisuallyHidden>
                 <Chip
-                    ref={ref as any}
+                    // @ts-expect-error: ignore.
+                    ref={ref as Ref<HTMLDivElement>}
                     classNames={{
                         base: `${styles.base()} ${classNames.base || ""}`,
                         content: `${styles.content()} ${classNames.content || ""}`,
@@ -86,6 +89,7 @@ const CustomCheckbox = React.forwardRef<HTMLDivElement, CustomCheckboxProps>(
                 >
                     {children || (isSelected ? "Enabled" : "Disabled")}
                 </Chip>
+
             </label>
         );
     }

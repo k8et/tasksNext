@@ -1,23 +1,21 @@
-import {Select} from "@nextui-org/react";
-import React, {ReactNode} from "react";
+import { Select } from "@nextui-org/react";
+import React, { ReactNode } from "react";
 
-type CustomSelectProps<T> = {
+type CustomSelectProps = {
     label: string;
     placeholder: string;
     className?: string;
     children?: ReactNode;
-    classNameSelect?: string;
 } & React.ComponentProps<typeof Select>;
 
-function CustomSelect<T>(props: CustomSelectProps<T>) {
+function CustomSelect(props: CustomSelectProps) {
     const {
         label,
         placeholder,
         className,
-        classNameSelect,
         children,
         ...rest
-    } = props
+    } = props;
 
     return (
         <Select

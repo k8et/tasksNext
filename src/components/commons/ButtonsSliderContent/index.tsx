@@ -4,7 +4,7 @@ import CustomButton from "@/shared/ui/Button";
 const ButtonsSliderContent = () => {
     return (
         <div
-            className="flex justify-center items-center  gap-3  w-full flex-wrap rounded-lg text-white px-3">
+            className="flex justify-center items-center bg-white/10 gap-3  w-full flex-wrap rounded-lg text-white px-3">
             <CustomButton  variant={"primary"}>Click</CustomButton>
             <CustomButton variant={"secondary"}>Click</CustomButton>
             <CustomButton

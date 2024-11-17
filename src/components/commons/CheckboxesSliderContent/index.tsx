@@ -15,18 +15,19 @@ const AutocompleteSliderContent = () => {
                         +
                     </div>
                 }
-                children="Add New"
-            />
+            >
+                Add New
+            </CustomCheckbox>
             <CustomCheckbox
                 color="success"
                 startContent={<div>✅</div>}
-                children="Success Checkbox"
                 classNames={{
                     base: "bg-blue-500",
                     content: "text-black",
                 }}
-
-            />
+            >
+                Success Checkbox
+            </CustomCheckbox>
             <CustomCheckbox
                 defaultSelected={true}
             />

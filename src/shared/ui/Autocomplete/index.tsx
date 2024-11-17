@@ -1,5 +1,5 @@
 import { Autocomplete, AutocompleteItem } from "@nextui-org/react";
-import {FC} from "react";
+import { FC } from "react";
 import { users, User } from "@/utils/mock";
 
 interface CustomAutocompleteProps {
@@ -7,7 +7,7 @@ interface CustomAutocompleteProps {
 }
 
 const CustomAutocomplete: FC<CustomAutocompleteProps> = ({ setSelectedUserName }) => {
-    const handleSelectionChange = (selectedKey: any | null) => {
+    const handleSelectionChange = (selectedKey: string | number | null) => {
         if (selectedKey === null) return;
 
         const selectedIndex = typeof selectedKey === 'number' ? selectedKey : -1;
